@@ -14,7 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('train', function (Blueprint $table) {
-            $table->id('code');
+            $table->bigIncrements('id');
+            $table->integer('code');
             $table->string('type');
             $table->string('departure_station');
             $table->string('arrival_station');
